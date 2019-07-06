@@ -1,0 +1,97 @@
+@mixin media-breakpoint-up($name, $orientation: null, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+
+  @if ($min and $orientation != null) {
+    @media (min-width: $min) and (orientation: unquote($orientation)) {
+      @content;
+    }
+  }
+
+  @else if ($min) {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($name, $orientation: null, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+
+  @if ($max and $orientation != null) {
+    @media (max-width: $max) and (orientation: unquote($orientation)) {
+      @content;
+    }
+  }
+
+  @else if($max) {
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($lower, $upper, $orientation: null, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($lower, $breakpoints);
+  $max: breakpoint-max($upper, $breakpoints);
+
+  @if ($min != null and $max != null and $orientation != null) {
+    @media (min-width: $min) and (max-width: $max) and (orientation: unquote($orientation)) {
+      @content;
+    }
+  }
+
+  @else if ($min != null and $max != null) {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+
+  @else if ($max == null) {
+    @include media-breakpoint-up($lower, $orientation, $breakpoints) {
+      @content;
+    }
+  }
+
+  @else if ($min == null) {
+    @include media-breakpoint-down($upper, $orientation, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-only($name, $orientation: null, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  $max: breakpoint-max($name, $breakpoints);
+
+  @if ($min != null and $max != null and $orientation != null) {
+    @media (min-width: $min) and (max-width: $max) and (orientation: unquote($orientation)) {
+      @content;
+    }
+  }
+
+  @else if ($min != null and $max != null) {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+
+  @else if ($max == null) {
+    @include media-breakpoint-up($name, $orientation, $breakpoints) {
+      @content;
+    }
+  }
+
+  @else if ($min == null) {
+    @include media-breakpoint-down($name, $orientation, $breakpoints) {
+      @content;
+    }
+  }
+}

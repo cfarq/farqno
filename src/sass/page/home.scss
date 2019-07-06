@@ -8,19 +8,28 @@
     justify-content: center;
     align-self: center;
 
-
     &__joke {
       color: $theme-accent-no;
+      margin-bottom: $spacer-y / 2;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     &__name {
       font-size: 5 * $font-size-base;
       color: $color-white;
+
+      @include media-breakpoint-down('md') {
+        font-size: 2 * $font-size-base;
+      }
     }
 
     &__job-title {
       color: $theme-gray;
       font-size: 1.5 * $font-size-base;
+      margin-bottom: $spacer-y;
     }
 
     &__joke,
@@ -28,6 +37,5 @@
     &__job-title {
       text-align: center;
     }
-
   }
 }

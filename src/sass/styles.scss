@@ -21,7 +21,6 @@ $font-weight-medium: 500;
 $font-weight-black: 900;
 
 //colors
-
 $color-white: #FFFFFF !default;
 
 $theme-primary: #1A1A1D;
@@ -31,14 +30,33 @@ $theme-accent-farq: #e90600;
 $theme-gray: #4e4e50;
 
 // transitions
-
 $transition-base: all 200ms ease-in-out !default;
 $transition-fade: 150ms linear !default;
 
+// breakpoints
+$grid-breakpoint-sm:  0 !default;
+$grid-breakpoint-md:  640px !default;
+$grid-breakpoint-lg:  1024px !default;
+$grid-breakpoint-xl:  1200px !default;
+$grid-breakpoint-xxl: 1440px !default;
+$grid-breakpoint-sxl: 1600px !default;
+
+$grid-breakpoints: () !default;
+$grid-breakpoints: map-merge(
+  (
+    'sm':  $grid-breakpoint-sm,
+    'md':  $grid-breakpoint-md,
+    'lg':  $grid-breakpoint-lg,
+    'xl':  $grid-breakpoint-xl,
+    'xxl': $grid-breakpoint-xxl,
+    'sxl': $grid-breakpoint-sxl
+  ),
+  $grid-breakpoints
+);
+
 // if the variables get out of hand, should turn this into it's own file.
 
-
-
+@import './mixins';
 @import './components';
 @import './pages';
 
@@ -61,4 +79,12 @@ body {
 
 small {
   font-size: 0.8rem;
+}
+
+h1 {
+  color: $color-white;
+}
+
+p {
+  color: $color-white;
 }

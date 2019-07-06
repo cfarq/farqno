@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Labs from './views/Labs.vue'
 import Contact from './views/Contact.vue'
+import WeatherApp from './views/WeatherApp.vue'
 
 Vue.use(Router)
 
@@ -13,19 +14,24 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: Home
     },
     {
       path: '/labs',
-      name: 'labs',
-      component: Labs
+      name: 'Labs',
+      component: Labs,
+      children: [
+        {
+          path: '/labs/weather-app',
+          component: WeatherApp
+        }
+      ]
     },
     {
       path: '/contact',
-      name: 'contact',
+      name: 'Contact',
       component: Contact
     }
-
   ]
 })
