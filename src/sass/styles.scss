@@ -8,6 +8,11 @@ $font-default: 'Heebo', sans-serif !default;
 
 $font-size-base: 14px !default;
 
+// spacers
+$spacer-x: 1rem !default;
+$spacer-y: 1rem !default;
+$spacer:   max($spacer-x, $spacer-y) !default;
+
 // font weights
 $font-weight-default: 400 !default;
 
