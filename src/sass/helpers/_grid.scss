@@ -1,0 +1,26 @@
+//Shamelessly borrowed from: https://codepen.io/heydon/pen/dpzwVd
+
+.fukol {
+  margin: 0.5em;
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5em;
+
+    // added by me
+    min-height: 100vh;
+
+    & > * {
+      flex: 1 0 10em;
+      margin: 0.5em;;
+    }
+
+    &.h-centre {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+

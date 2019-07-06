@@ -1,0 +1,59 @@
+// Third party stuff because i'm too lazy to write a framework for this tiny website
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,500,900&display=swap');
+
+
+$font-default: 'Heebo', sans-serif !default;
+
+$font-size-base: 14px !default;
+
+// font weights
+$font-weight-default: 400 !default;
+
+$font-weight-regular: $font-weight-default;
+$font-weight-medium: 500;
+$font-weight-black: 900;
+
+//colors
+
+$color-white: #FFFFFF !default;
+
+$theme-primary: #1A1A1D;
+$theme-secondary: $color-white;
+$theme-accent-no: #c7323b;
+$theme-accent-farq: #e90600;
+$theme-gray: #4e4e50;
+
+// transitions
+
+$transition-base: all 200ms ease-in-out !default;
+$transition-fade: 150ms linear !default;
+
+// if the variables get out of hand, should turn this into it's own file.
+
+
+
+@import './components';
+@import './pages';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: $theme-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-default;
+  line-height: 1.42857143;
+  margin: 0;
+  position: relative;
+  height: 100%;
+}
+
+small {
+  font-size: 0.8rem;
+}
