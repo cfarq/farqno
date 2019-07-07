@@ -3,10 +3,12 @@
     <div class="fukol">
       <div class="fukol__grid h-centre">
         <div class="main-content">
-          <small class="main-content__joke" @click="updateJoke">{{ joke }}</small>
+          <small class="main-content__joke" @click="updateJoke">{{ joke }}
+            <img v-if="jokeCount < 7" class="flag-img" src="../../public/img/norway-flag.png" alt="">
+            <img v-else class="flag-img" src="../../public/img/union-jack.png" alt="">
+          </small>
           <h1 class="main-content__name">Charles Farquharson</h1>
           <span class="main-content__job-title">Front-end Developer</span>
-
           <navbar></navbar>
         </div>
         </div>

@@ -9,8 +9,14 @@
     align-self: center;
 
     &__joke {
-      color: $theme-accent-no;
+      color: $theme-accent-farq;
       margin-bottom: $spacer-y / 2;
+
+      .flag-img {
+        max-width: 25px;
+        display: inline-block;
+        margin-left: 5px;
+      }
 
       &:hover {
         cursor: pointer;
@@ -24,6 +30,13 @@
       @include media-breakpoint-down('md') {
         font-size: 2 * $font-size-base;
       }
+    }
+
+    &__logo {
+      max-width: 50px;
+      align-self: center;
+      margin-top: $spacer-y;
+      margin-bottom: $spacer-y;
     }
 
     &__job-title {

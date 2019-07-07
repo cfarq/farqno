@@ -10,7 +10,7 @@ import LabsList from './components/LabsList.vue'
 Vue.component('labs-list', LabsList)
 
 import LabItem from './components/LabItem.vue'
-Vue.component('labs-item', LabItem)
+Vue.component('lab-item', LabItem)
 
 
 // Styles

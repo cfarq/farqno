@@ -1,5 +1,5 @@
 <template>
-  <div class="nav" :class="{ 'full-width': fullWidth }">
+  <div v-show="navLength" class="nav" :class="{ 'full-width': fullWidth }">
     <router-link
             v-for="(link, index) in links"
             :to="link.path"
@@ -32,6 +32,11 @@
         this.$router.options.routes.forEach((route) => {
           this.links.push(route)
         })
+      }
+    },
+    computed: {
+      navLength () {
+        return this.$router.options.routes.length
       }
     }
   }

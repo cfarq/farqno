@@ -1,8 +1,10 @@
+
 <template>
   <div>{{ this.weather }}</div>
 </template>
 
 <script>
+  /* global axios */
   export default {
     name: "Weather",
     data () {
@@ -30,13 +32,11 @@
               that.longitude = position.coords.longitude
 
               that.setCity()
-
-              console.log('latitude', position.coords.latitude, 'longitude', position.coords.longitude)
             },
-            function error(error_message) {
-              // for when getting location results in an error
-              // trigger modal or some UI event to tell them to enable location data tings
-            }
+            // function error(error_message) {
+            //   // for when getting location results in an error
+            //   // trigger modal or some UI event to tell them to enable location data tings
+            // }
           )
         }
       },
@@ -49,7 +49,6 @@
       getWeather () {
         return axios.get('https://api.darksky.net/forecast/'+this.api+'/'+this.latitude+','+this.longitude+'').then((response) => {
           this.weather = response.data
-          console.log(this.weather)
         })
       }
     }

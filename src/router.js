@@ -24,7 +24,36 @@ export default new Router({
       children: [
         {
           path: '/labs/weather-app',
-          component: WeatherApp
+          name: 'Weather App',
+          component: WeatherApp,
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, cumque debitis exercitationem facilis fugiat nostrum sit velit voluptas! Aut labore laudantium odit quisquam sequi similique veniam veritatis? Doloremque, iusto, provident?',
+          image: 'http://placekitten.com/400/300',
+          tags: {
+            github: 'github.com/',
+            wip: true
+          }
+        },
+        {
+          path: '/labs/currency-convertor',
+          name: 'Currency Converter',
+          component: WeatherApp,
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, cumque debitis exercitationem facilis fugiat nostrum sit velit voluptas! Aut labore laudantium odit quisquam sequi similique veniam veritatis? Doloremque, iusto, provident?',
+          image: 'http://placekitten.com/400/300',
+          tags: {
+            github: 'github.com/',
+            wip: true
+          }
+        },
+        {
+          path: '/labs/bttf-clock',
+          name: 'Back to the Future clock',
+          component: WeatherApp,
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, cumque debitis exercitationem facilis fugiat nostrum sit velit voluptas! Aut labore laudantium odit quisquam sequi similique veniam veritatis? Doloremque, iusto, provident?',
+          image: 'http://placekitten.com/400/300',
+          tags: {
+            github: 'github.com/',
+            wip: false
+          }
         }
       ]
     },

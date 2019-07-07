@@ -1,19 +1,18 @@
 //Shamelessly borrowed from: https://codepen.io/heydon/pen/dpzwVd
 
 .fukol {
-  margin: 0.5em;
+  margin: 0.5rem;
 
   &__grid {
     display: flex;
     flex-wrap: wrap;
-    margin: -0.5em;
+    margin: -0.5rem;
+    min-height: calc(100vh - 1rem);
 
-    // added by me
-    min-height: 100vh;
 
     & > * {
-      flex: 1 0 10em;
-      margin: 0.5em;;
+      flex: 1 0 (5 * $spacer-x);
+      margin: 0.5rem;
     }
 
     &.h-centre {
@@ -23,4 +22,16 @@
   }
 }
 
+.fukol-margin {
+  margin: 0;
 
+  &__gird {
+    @extend .fukol__grid;
+    margin: 0;
+
+    & > * {
+      flex: 1 0 (5 * $spacer-x);
+      margin: 0;
+    }
+  }
+}
