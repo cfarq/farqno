@@ -9,6 +9,7 @@
           </small>
           <h1 class="main-content__name">Charles Farquharson</h1>
           <span class="main-content__job-title">Front-end Developer</span>
+          <img class="main-content__logo" src="../assets/logo.svg" alt="Charles Farquharson">
           <navbar></navbar>
         </div>
         </div>

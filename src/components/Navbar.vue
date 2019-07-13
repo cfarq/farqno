@@ -1,5 +1,5 @@
 <template>
-  <div v-show="navLength" class="nav" :class="{ 'full-width': fullWidth }">
+  <div v-show="navLength > 1" class="nav" :class="{ 'full-width': fullWidth }">
     <router-link
             v-for="(link, index) in links"
             :to="link.path"
