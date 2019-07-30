@@ -1,10 +1,15 @@
 <template>
   <div v-show="navLength > 1" class="nav" :class="{ 'full-width': fullWidth }">
-    <router-link
-            v-for="(link, index) in links"
-            :to="link.path"
-    >
-      {{ link.name }}</router-link>
+    <div v-if="fullWidth" class="full-width-logo">
+      <img  class="nav__logo" src="../assets/logo.svg" alt="Farq NO">
+    </div>
+    <div class="nav-items">
+      <router-link
+              v-for="(link, index) in links"
+              :to="link.path"
+      >
+        {{ link.name }}</router-link>
+    </div>
   </div>
 </template>
 

@@ -4,11 +4,11 @@
       <div class="fukol__grid h-centre">
         <div class="main-content">
           <small class="main-content__joke" @click="updateJoke">
-            <div class="main-content__joke__content">
+            <span class="main-content__joke__content">
               {{ joke }}
-              <img v-if="jokeCount < 7" class="flag-img" src="../../public/img/norway-flag.png" alt="">
-              <img v-else class="flag-img" src="../../public/img/union-jack.png" alt="">
-            </div>
+              <img v-if="jokeCount < 7" class="flag-img" src="../../public/img/norway-flag.png" alt="Norwegian Flag">
+              <img v-else class="flag-img" src="../../public/img/union-jack.png" alt="United Kingdom Flag">
+            </span>
           </small>
           <h1 class="main-content__name">Charles Farquharson</h1>
           <h2 class="main-content__job-title">Front-end Developer</h2>

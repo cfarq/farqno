@@ -159,6 +159,11 @@ $elevation-ambient: (
 @import './components';
 @import './pages';
 
+::selection {
+  background: $theme-accent-farq;
+  color: $color-white;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

@@ -10,9 +10,14 @@
       flex-direction: column;
       flex-basis: 100%;
 
+      h1 {
+        padding-left: $spacer-x;
+      }
+
       .intro {
         max-width: 50%;
         margin-bottom: $spacer-y * 3;
+        padding-left: $spacer-x;
       }
     }
   }
