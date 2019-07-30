@@ -1,6 +1,6 @@
 <template>
   <div class="fukol-margin">
-    <div class="fukol-margin__gird">
+    <div class="fukol-margin__gird lab-list">
       <lab-item
               v-for="(item, index) in list"
               :item="item"

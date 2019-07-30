@@ -1,0 +1,14 @@
+@mixin state($states) {
+  $selector: '';
+
+  @for $i from 1 through length($states) {
+    $state: nth($states, $i);
+
+    @if $i > 1 {
+      $selector: $selector ', ';
+    }
+    $selector: $selector '&:#{$state}, &.#{$state}';
+  }
+
+  #{$selector} { @content; }
+}

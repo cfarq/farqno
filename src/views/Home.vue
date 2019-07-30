@@ -3,12 +3,15 @@
     <div class="fukol">
       <div class="fukol__grid h-centre">
         <div class="main-content">
-          <small class="main-content__joke" @click="updateJoke">{{ joke }}
-            <img v-if="jokeCount < 7" class="flag-img" src="../../public/img/norway-flag.png" alt="">
-            <img v-else class="flag-img" src="../../public/img/union-jack.png" alt="">
+          <small class="main-content__joke" @click="updateJoke">
+            <div class="main-content__joke__content">
+              {{ joke }}
+              <img v-if="jokeCount < 7" class="flag-img" src="../../public/img/norway-flag.png" alt="">
+              <img v-else class="flag-img" src="../../public/img/union-jack.png" alt="">
+            </div>
           </small>
           <h1 class="main-content__name">Charles Farquharson</h1>
-          <span class="main-content__job-title">Front-end Developer</span>
+          <h2 class="main-content__job-title">Front-end Developer</h2>
           <img class="main-content__logo" src="../assets/logo.svg" alt="Charles Farquharson">
           <navbar></navbar>
         </div>
@@ -23,7 +26,7 @@ export default {
   name: 'Home',
   data() {
     return {
-      joke: 'Farq no?',
+      joke: 'Farq NO',
       jokeCount: 0
     }
   },

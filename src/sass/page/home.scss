@@ -11,24 +11,36 @@
     &__joke {
       color: $theme-accent-farq;
       margin-bottom: $spacer-y / 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 0.5px;
 
-      .flag-img {
-        max-width: 25px;
-        display: inline-block;
-        margin-left: 5px;
-      }
+      &__content {
+        display: flex;
+        align-items: center;
 
-      &:hover {
-        cursor: pointer;
+        .flag-img {
+          max-width: 25px;
+          display: inline-block;
+          margin-left: 0.5 * $spacer-x;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
     &__name {
-      font-size: 5 * $font-size-base;
+      font-size: 2 * $font-size-base;
       color: $color-white;
+      margin-bottom: 0.5 * $spacer-y;
+      margin-top: 0.5 * $spacer-y;
+      letter-spacing: 0.2 * $spacer-x;
 
-      @include media-breakpoint-down('md') {
-        font-size: 2 * $font-size-base;
+      @media only screen and (min-width: 1024px) {
+        font-size: 5 * $font-size-base;
       }
     }
 
@@ -40,6 +52,8 @@
     }
 
     &__job-title {
+      font-weight: normal;
+      margin-top: 0;
       color: $theme-gray;
       font-size: 1.5 * $font-size-base;
       margin-bottom: $spacer-y;

@@ -7,7 +7,6 @@
           <div class="inner-content">
             <h1>Labs</h1>
             <p class="intro">
-
               Below you'll find a various selection of completed and work in progress. Some are experiments / exercise to
               learn something new, a few might just be freelance work that I've worked on in the past.
             </p>
